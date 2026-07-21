@@ -1,0 +1,55 @@
+{
+  "name": "@otisworks/batch-kit",
+  "version": "0.0.1",
+  "description": "Ergonomic CLI + library for the Anthropic Message Batches API",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "batch": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "anthropic",
+    "claude",
+    "batch",
+    "batches",
+    "cli",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otisworks/batch-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/otisworks/batch-kit/issues"
+  },
+  "homepage": "https://github.com/otisworks/batch-kit#readme",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.112.4",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.0"
+  }
+}
