@@ -5,10 +5,10 @@ An ergonomic CLI + library for the [Anthropic Message Batches API](https://platf
 Process large volumes of documents with Claude at **50% off** the standard API cost — without hand-writing JSONL, tracking batch IDs, or reimplementing polling loops.
 
 ```bash
-batch add --dir ./reviews --prompt "Summarize this review:\n\n{content}"
-batch send
+npx batch add --dir ./reviews --prompt "Summarize this review:\n\n{content}"
+npx batch send
 # ...later...
-batch fetch --latest --output summaries.json
+npx batch fetch --latest --output summaries.json
 ```
 
 ---
@@ -24,15 +24,31 @@ The Batch API is great for cost-effective bulk processing, but the raw developer
 
 ## Install
 
+**As a local project dependency:**
+
 ```bash
 npm install @otisworks/batch-kit
 ```
 
-For the CLI globally:
+Run the CLI with `npx`:
+
+```bash
+npx batch <command>
+```
+
+**Or install globally** to use the bare `batch` command:
 
 ```bash
 npm install -g @otisworks/batch-kit
+batch <command>
 ```
+
+> **Note:** With a local install, run commands as `npx batch ...`. The bare
+> `batch` command only works after a global install (`npm i -g`). Without one,
+> your shell may resolve `batch` to an unrelated system utility.
+>
+> The examples below use the bare `batch` command; prefix them with `npx` if
+> you installed locally.
 
 ## Setup
 
