@@ -1,6 +1,6 @@
 {
   "name": "@otisworks/batch-kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ergonomic CLI + library for the Anthropic Message Batches API",
   "type": "module",
   "engines": {
